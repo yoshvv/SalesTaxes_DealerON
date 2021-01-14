@@ -33,7 +33,7 @@ namespace SalesTaxes.Database
             StoreItems.Add(item);
         }
 
-        public static IReadOnlyList<Item> GetItems() 
+        public static List<Item> GetItems() 
         {
             return StoreItems;
         }

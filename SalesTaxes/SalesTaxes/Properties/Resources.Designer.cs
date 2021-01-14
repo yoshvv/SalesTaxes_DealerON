@@ -133,6 +133,15 @@ namespace SalesTaxes.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Modify any information of an existing product.
+        /// </summary>
+        internal static string txt_editExistingProduct {
+            get {
+                return ResourceManager.GetString("txt_editExistingProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit product.
         /// </summary>
         internal static string txt_editProduct {
@@ -255,6 +264,15 @@ namespace SalesTaxes.Properties {
         internal static string txt_validation_name {
             get {
                 return ResourceManager.GetString("txt_validation_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What property you would like to modify?.
+        /// </summary>
+        internal static string txt_whatEdit {
+            get {
+                return ResourceManager.GetString("txt_whatEdit", resourceCulture);
             }
         }
     }

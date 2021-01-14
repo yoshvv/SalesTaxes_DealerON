@@ -23,7 +23,7 @@ namespace SalesTaxes.Logic
         private List<Basket> Basket { get; set; }
 
         /// <summary>
-        /// Sub menu to buy products
+        /// Sub menu to add products
         /// </summary>
         public void StartAddingProducts()
         {
@@ -61,16 +61,87 @@ namespace SalesTaxes.Logic
         }
 
         /// <summary>
+        /// Sub menu to edit products
+        /// </summary>
+        public void StartEditingProducts()
+        {
+            var isEditing = true;
+
+            //Values for new product
+            var name = "";
+            var price = 0m;
+            var category = Category.Books;
+            var isImported = false;
+
+            while (isEditing)
+            {
+                WriteLineHelper.SuccessAlert(Resources.separator);
+                WriteLineHelper.InfoAlert(Resources.txt_editExistingProduct);
+                WriteLineHelper.SuccessAlert(Resources.separator);
+                WriteLineHelper.SuccessAlert("");
+
+                ItemLogic.ShowProductsToBuy(showProductsToBuy: false);
+                var option = Console.ReadLine();
+
+                if (InputHelper.IsValidOption(option)) 
+                {
+                    var index = int.Parse(option);
+                    
+                    ItemLogic.ShowProductsToBuy(showProductsToBuy: false);
+                    WriteLineHelper.WarningAlert(Resources.txt_whatEdit);
+                    WriteLineHelper.WarningAlert($"[1] {Resources.txt_name}");
+                    WriteLineHelper.WarningAlert($"[2] {Resources.txt_price}");
+                    WriteLineHelper.WarningAlert($"[3] {Resources.txt_category}");
+                    WriteLineHelper.WarningAlert($"[4] {Resources.txt_import}");
+                    var optionProperty = Console.ReadLine();
+
+                    if (InputHelper.IsValidOption(optionProperty)) 
+                    {
+                        switch (optionProperty) 
+                        {
+                            case "1":
+                                //Step 1
+                                name = AskForName(showSteps: false);
+                                ItemsService.GetItems()[index - 1].Name = name;
+                                break;
+                            case "2":
+                                //Step 2
+                                price = AskForPrice(showSteps: false);
+                                ItemsService.GetItems()[index - 1].Price = price;
+                                break;
+                            case "3":
+                                //Step 3
+                                category = AskForCategory(showSteps: false);
+                                ItemsService.GetItems()[index - 1].Category = category;
+                                break;
+                            case "4":
+                                //Step 4
+                                isImported = AskForImport(showSteps: false);
+                                ItemsService.GetItems()[index - 1].IsImported = isImported;
+                                break;
+                        }
+                    }
+                }
+
+                isEditing = false;
+            }
+
+            WriteLineHelper.SuccessAlert($"Information updated");
+            WriteLineHelper.SuccessAlert("");
+        }
+
+        /// <summary>
         /// Creates a loop for asking the name of the product
         /// </summary>
         /// <returns></returns>
-        public string AskForName() 
+        public string AskForName(bool showSteps = true) 
         {
             bool isAskingForName = true;
             var name = "";
             while (isAskingForName)
             {
-                WriteLineHelper.WarningAlert(string.Format(Resources.txt_steps, 1, 4));
+                if(showSteps)
+                    WriteLineHelper.WarningAlert(string.Format(Resources.txt_steps, 1, 4));
                 WriteLineHelper.WarningAlert($"{Resources.txt_name}: ");
                 name = Console.ReadLine();
 
@@ -89,14 +160,15 @@ namespace SalesTaxes.Logic
         /// Creates a loop for asking the price of the product
         /// </summary>
         /// <returns></returns>
-        public decimal AskForPrice()
+        public decimal AskForPrice(bool showSteps = true)
         {
             bool isAskingForPrice = true;
             var input = "";
             var price = 0m;
             while (isAskingForPrice)
             {
-                WriteLineHelper.WarningAlert(string.Format(Resources.txt_steps, 2, 4));
+                if (showSteps)
+                    WriteLineHelper.WarningAlert(string.Format(Resources.txt_steps, 2, 4));
                 WriteLineHelper.WarningAlert($"{Resources.txt_price}: ");
                 input = Console.ReadLine();
 
@@ -117,14 +189,15 @@ namespace SalesTaxes.Logic
         /// Creates a loop for asking the category of the product
         /// </summary>
         /// <returns></returns>
-        public Category AskForCategory()
+        public Category AskForCategory(bool showSteps = true)
         {
             bool isAskingForCategory = true;
             var input = "";
             var category = Category.Books;
             while (isAskingForCategory)
             {
-                WriteLineHelper.WarningAlert(string.Format(Resources.txt_steps, 3, 4));
+                if (showSteps)
+                    WriteLineHelper.WarningAlert(string.Format(Resources.txt_steps, 3, 4));
                 WriteLineHelper.WarningAlert($"{Resources.txt_category}: ");
                 WriteLineHelper.WarningAlert($"[0] Books ");
                 WriteLineHelper.WarningAlert($"[1] Food ");
@@ -151,14 +224,15 @@ namespace SalesTaxes.Logic
         /// Creates a loop for asking if  the product is imported or not
         /// </summary>
         /// <returns></returns>
-        public bool AskForImport()
+        public bool AskForImport(bool showSteps = true)
         {
             bool isAskingForImport = true;
             var input = "";
             var isImport = false;
             while (isAskingForImport)
             {
-                WriteLineHelper.WarningAlert(string.Format(Resources.txt_steps, 4, 4));
+                if(showSteps)
+                    WriteLineHelper.WarningAlert(string.Format(Resources.txt_steps, 4, 4));
                 WriteLineHelper.WarningAlert($"{Resources.txt_import}: ");
                 WriteLineHelper.WarningAlert("[1] Yes");
                 WriteLineHelper.WarningAlert("[2] No");

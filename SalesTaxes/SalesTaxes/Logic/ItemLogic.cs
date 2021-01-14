@@ -17,15 +17,19 @@ namespace SalesTaxes.Logic
         /// <summary>
         /// Show the list of products stored and the index to be selected when buying
         /// </summary>
-        public void ShowProductsToBuy()
+        public void ShowProductsToBuy(bool showProductsToBuy = true)
         {
             //List of products
             var products = ItemsService.GetItems();
-
-            WriteLineHelper.SuccessAlert(Resources.separator);
-            WriteLineHelper.SuccessAlert($"{Resources.txt_pickProducts} [X] Return, [Y] See total");
-            WriteLineHelper.SuccessAlert(Resources.separator);
-
+            
+            if (showProductsToBuy) 
+            {
+                var aditionalOptions = showProductsToBuy ? "[X] Return, [Y] See total" : "";
+                WriteLineHelper.SuccessAlert(Resources.separator);
+                WriteLineHelper.SuccessAlert($"{Resources.txt_pickProducts} {aditionalOptions}");
+                WriteLineHelper.SuccessAlert(Resources.separator);
+            }
+            
             //Showing the products ordered by category
             var index = 1;
             foreach (var product in products)

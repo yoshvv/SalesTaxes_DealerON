@@ -46,6 +46,9 @@ namespace SalesTaxes
                         case "2":
                             storeLogic.StartAddingProducts();
                             break;
+                        case "3":
+                            storeLogic.StartEditingProducts();
+                            break;
                         case "4":
                             storeLogic.StartBuyingProducts();
                             break;

@@ -141,6 +141,9 @@
   <data name="txt_category" xml:space="preserve">
     <value>Category</value>
   </data>
+  <data name="txt_editExistingProduct" xml:space="preserve">
+    <value>Modify any information of an existing product</value>
+  </data>
   <data name="txt_editProduct" xml:space="preserve">
     <value>Edit product</value>
   </data>
@@ -182,5 +185,8 @@
   </data>
   <data name="txt_validation_name" xml:space="preserve">
     <value>Name cannot be empty</value>
+  </data>
+  <data name="txt_whatEdit" xml:space="preserve">
+    <value>What property you would like to modify?</value>
   </data>
 </root>
