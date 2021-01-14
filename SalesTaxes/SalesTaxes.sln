@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesTaxes", "SalesTaxes\SalesTaxes.csproj", "{DACC09C2-AAC6-4B2E-A43A-96222FA97948}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesTaxesTest", "SalesTaxesTest\SalesTaxesTest.csproj", "{4FCB36DA-65A9-4D74-845D-E1BCE809FC52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DACC09C2-AAC6-4B2E-A43A-96222FA97948}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DACC09C2-AAC6-4B2E-A43A-96222FA97948}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DACC09C2-AAC6-4B2E-A43A-96222FA97948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FCB36DA-65A9-4D74-845D-E1BCE809FC52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FCB36DA-65A9-4D74-845D-E1BCE809FC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FCB36DA-65A9-4D74-845D-E1BCE809FC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FCB36DA-65A9-4D74-845D-E1BCE809FC52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
