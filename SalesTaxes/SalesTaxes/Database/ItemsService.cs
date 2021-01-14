@@ -11,6 +11,7 @@ namespace SalesTaxes.Database
     {
         public ItemsService() 
         {
+            InitItems();
         }
 
         public List<Item> StoreItems { get; set; }
