@@ -133,11 +133,29 @@ namespace SalesTaxes.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No products in basket.
+        /// </summary>
+        internal static string txt_noProducts {
+            get {
+                return ResourceManager.GetString("txt_noProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add products to your basket.
         /// </summary>
         internal static string txt_pickProducts {
             get {
                 return ResourceManager.GetString("txt_pickProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Press a key to exit....
+        /// </summary>
+        internal static string txt_pressAKey {
+            get {
+                return ResourceManager.GetString("txt_pressAKey", resourceCulture);
             }
         }
         

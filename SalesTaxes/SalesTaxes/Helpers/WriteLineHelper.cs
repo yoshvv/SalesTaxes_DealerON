@@ -9,8 +9,6 @@ namespace SalesTaxes.Helpers
     /// </summary>
     public static class WriteLineHelper
     {
-        public static string Separator() => "-------------------------------------------------";
-
         /// <summary>
         /// Green success message
         /// </summary>

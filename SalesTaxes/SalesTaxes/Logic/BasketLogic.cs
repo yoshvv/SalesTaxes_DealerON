@@ -10,12 +10,16 @@ namespace SalesTaxes.Logic
 {
     public class BasketLogic
     {
+        /// <summary>
+        /// Show the total output in the console
+        /// </summary>
+        /// <param name="basket"></param>
         public void ShowTotalInBasket(List<Basket> basket)
         {
             Console.Clear();
             if (basket.Count() == 0)
             {
-                WriteLineHelper.SuccessAlert($"No products in basket");
+                WriteLineHelper.SuccessAlert(Resources.txt_noProducts);
                 WriteLineHelper.SuccessAlert($"");
                 return;
             }
@@ -47,6 +51,11 @@ namespace SalesTaxes.Logic
             WriteLineHelper.SuccessAlert("");
         }
 
+        /// <summary>
+        /// Add or update the given product in the basket
+        /// </summary>
+        /// <param name="basket"></param>
+        /// <param name="product"></param>
         public void AddProductToBasket(List<Basket> basket, Item product)
         {
             var productInBasket = basket
@@ -104,6 +113,11 @@ namespace SalesTaxes.Logic
             return Math.Ceiling(val / .05m) * .05m;
         }
 
+        /// <summary>
+        /// Basic and import tax total of the basket
+        /// </summary>
+        /// <param name="basket"></param>
+        /// <returns></returns>
         public decimal GetAllSalesTaxes(IReadOnlyList<IBasket> basket) 
         {
             return basket
@@ -112,6 +126,11 @@ namespace SalesTaxes.Logic
                 Sum(x => x);
         }
 
+        /// <summary>
+        /// Sum of the total of products in basket
+        /// </summary>
+        /// <param name="basket"></param>
+        /// <returns></returns>
         public decimal GetTotalBasket(IReadOnlyList<IBasket> basket)
         {
             return basket

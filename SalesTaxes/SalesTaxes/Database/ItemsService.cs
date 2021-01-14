@@ -16,6 +16,9 @@ namespace SalesTaxes.Database
 
         private List<Item> StoreItems { get; set; }
 
+        /// <summary>
+        /// Current products stored in the app
+        /// </summary>
         public void InitItems() 
         {
             StoreItems = new List<Item>() 

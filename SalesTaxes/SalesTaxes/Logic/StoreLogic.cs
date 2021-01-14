@@ -4,7 +4,6 @@ using SalesTaxes.Models;
 using SalesTaxes.Properties;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace SalesTaxes.Logic
 {
@@ -52,6 +51,10 @@ namespace SalesTaxes.Logic
             }
         }
 
+        /// <summary>
+        /// Asks the user if wants to return to the main menu
+        /// </summary>
+        /// <returns></returns>
         public bool ReturnToMainMenu() 
         {
             Console.Clear();
@@ -82,11 +85,10 @@ namespace SalesTaxes.Logic
             return returnToMain;
         }
 
-        public void SeeTotal() 
-        {
-
-        }
-
+        /// <summary>
+        /// Adds or update the quantity of a product in the basket
+        /// </summary>
+        /// <param name="selectedOption"></param>
         public void AddProduct(string selectedOption) 
         {
             if (!InputHelper.IsValidOption(selectedOption)) return;

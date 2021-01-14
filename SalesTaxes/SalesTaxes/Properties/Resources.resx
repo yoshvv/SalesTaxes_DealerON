@@ -141,8 +141,14 @@
   <data name="txt_listOfProducts" xml:space="preserve">
     <value>List of products</value>
   </data>
+  <data name="txt_noProducts" xml:space="preserve">
+    <value>No products in basket</value>
+  </data>
   <data name="txt_pickProducts" xml:space="preserve">
     <value>Add products to your basket</value>
+  </data>
+  <data name="txt_pressAKey" xml:space="preserve">
+    <value>Press a key to exit...</value>
   </data>
   <data name="txt_purchase" xml:space="preserve">
     <value>Purchase</value>

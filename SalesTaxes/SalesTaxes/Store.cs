@@ -49,7 +49,7 @@ namespace SalesTaxes
                 Console.Clear();
             }
 
-            WriteLineHelper.InfoAlert("Press a key to exit...");
+            WriteLineHelper.InfoAlert(Resources.txt_pressAKey);
             Console.ReadLine();
         }
     }

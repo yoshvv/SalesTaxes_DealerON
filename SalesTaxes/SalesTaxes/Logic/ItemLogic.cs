@@ -17,6 +17,9 @@ namespace SalesTaxes.Logic
 
         readonly ItemsService Service;
 
+        /// <summary>
+        /// Show the list of products stored and the index to be selected when buying
+        /// </summary>
         public void ShowProductsToBuy()
         {
             //List of products
@@ -36,6 +39,9 @@ namespace SalesTaxes.Logic
             WriteLineHelper.SuccessAlert("");
         }
 
+        /// <summary>
+        /// Show all the products ordered by category
+        /// </summary>
         public void ShowProductsByCategory() 
         {
             //List of products
@@ -60,6 +66,12 @@ namespace SalesTaxes.Logic
             }
         }
 
+        /// <summary>
+        /// Show the index, name and price of a product
+        /// </summary>
+        /// <param name="product"></param>
+        /// <param name="index"></param>
+        /// <returns></returns>
         public string GetProductBasicDescription(Item product, int index)
         {
             var name = product.Name;
@@ -69,6 +81,11 @@ namespace SalesTaxes.Logic
             return string.Format($"[{index}] {product.Name} {Resources.txt_at} {price}");
         }
 
+        /// <summary>
+        /// Show the detail of a product in console
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
         public string GetProductFriendlyDescription(Item product) 
         {
             var name = product.Name;
