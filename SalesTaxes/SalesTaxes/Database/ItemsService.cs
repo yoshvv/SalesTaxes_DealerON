@@ -7,19 +7,14 @@ namespace SalesTaxes.Database
     /// <summary>
     /// Stores all the items to sell in the store
     /// </summary>
-    public class ItemsService
+    public static class ItemsService
     {
-        public ItemsService() 
-        {
-            InitItems();
-        }
-
-        private List<Item> StoreItems { get; set; }
+        private static List<Item> StoreItems { get; set; }
 
         /// <summary>
         /// Current products stored in the app
         /// </summary>
-        public void InitItems() 
+        public static void InitItems() 
         {
             StoreItems = new List<Item>() 
             {
@@ -33,9 +28,14 @@ namespace SalesTaxes.Database
             };
         }
 
-        public IReadOnlyList<Item> GetItems() 
+        public static void AddNewItem(Item item)
         {
-            return this.StoreItems;
+            StoreItems.Add(item);
+        }
+
+        public static IReadOnlyList<Item> GetItems() 
+        {
+            return StoreItems;
         }
     }
 }

@@ -123,6 +123,12 @@
   <data name="txt_addedInBasket" xml:space="preserve">
     <value>{0} added in basket</value>
   </data>
+  <data name="txt_addNewProduct" xml:space="preserve">
+    <value>Add the next information for the new product</value>
+  </data>
+  <data name="txt_addProduct" xml:space="preserve">
+    <value>Add new product</value>
+  </data>
   <data name="txt_at" xml:space="preserve">
     <value>at</value>
   </data>
@@ -132,14 +138,26 @@
   <data name="txt_basicTax" xml:space="preserve">
     <value>Basic tax</value>
   </data>
+  <data name="txt_category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="txt_editProduct" xml:space="preserve">
+    <value>Edit product</value>
+  </data>
   <data name="txt_exit" xml:space="preserve">
     <value>Exit</value>
+  </data>
+  <data name="txt_import" xml:space="preserve">
+    <value>Is imported?</value>
   </data>
   <data name="txt_importTax" xml:space="preserve">
     <value>Import tax</value>
   </data>
   <data name="txt_listOfProducts" xml:space="preserve">
     <value>List of products</value>
+  </data>
+  <data name="txt_name" xml:space="preserve">
+    <value>Name</value>
   </data>
   <data name="txt_noProducts" xml:space="preserve">
     <value>No products in basket</value>
@@ -150,10 +168,19 @@
   <data name="txt_pressAKey" xml:space="preserve">
     <value>Press a key to exit...</value>
   </data>
+  <data name="txt_price" xml:space="preserve">
+    <value>Price</value>
+  </data>
   <data name="txt_purchase" xml:space="preserve">
     <value>Purchase</value>
   </data>
   <data name="txt_return" xml:space="preserve">
     <value>Press any key to return...</value>
+  </data>
+  <data name="txt_steps" xml:space="preserve">
+    <value>Step {0} of {1}</value>
+  </data>
+  <data name="txt_validation_name" xml:space="preserve">
+    <value>Name cannot be empty</value>
   </data>
 </root>

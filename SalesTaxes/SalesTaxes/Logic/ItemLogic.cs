@@ -12,10 +12,7 @@ namespace SalesTaxes.Logic
     {
         public ItemLogic()
         {
-            Service = new ItemsService();
         }
-
-        readonly ItemsService Service;
 
         /// <summary>
         /// Show the list of products stored and the index to be selected when buying
@@ -23,7 +20,7 @@ namespace SalesTaxes.Logic
         public void ShowProductsToBuy()
         {
             //List of products
-            var products = Service.GetItems();
+            var products = ItemsService.GetItems();
 
             WriteLineHelper.SuccessAlert(Resources.separator);
             WriteLineHelper.SuccessAlert($"{Resources.txt_pickProducts} [X] Return, [Y] See total");
@@ -45,7 +42,7 @@ namespace SalesTaxes.Logic
         public void ShowProductsByCategory() 
         {
             //List of products
-            var products = Service.GetItems();
+            var products = ItemsService.GetItems();
 
             //Products by category
             var productsByCategory = products

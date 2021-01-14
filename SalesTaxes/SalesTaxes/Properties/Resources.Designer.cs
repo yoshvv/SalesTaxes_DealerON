@@ -79,6 +79,24 @@ namespace SalesTaxes.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add the next information for the new product.
+        /// </summary>
+        internal static string txt_addNewProduct {
+            get {
+                return ResourceManager.GetString("txt_addNewProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add new product.
+        /// </summary>
+        internal static string txt_addProduct {
+            get {
+                return ResourceManager.GetString("txt_addProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to at.
         /// </summary>
         internal static string txt_at {
@@ -106,11 +124,38 @@ namespace SalesTaxes.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Category.
+        /// </summary>
+        internal static string txt_category {
+            get {
+                return ResourceManager.GetString("txt_category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit product.
+        /// </summary>
+        internal static string txt_editProduct {
+            get {
+                return ResourceManager.GetString("txt_editProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
         internal static string txt_exit {
             get {
                 return ResourceManager.GetString("txt_exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is imported?.
+        /// </summary>
+        internal static string txt_import {
+            get {
+                return ResourceManager.GetString("txt_import", resourceCulture);
             }
         }
         
@@ -129,6 +174,15 @@ namespace SalesTaxes.Properties {
         internal static string txt_listOfProducts {
             get {
                 return ResourceManager.GetString("txt_listOfProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string txt_name {
+            get {
+                return ResourceManager.GetString("txt_name", resourceCulture);
             }
         }
         
@@ -160,6 +214,15 @@ namespace SalesTaxes.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        internal static string txt_price {
+            get {
+                return ResourceManager.GetString("txt_price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Purchase.
         /// </summary>
         internal static string txt_purchase {
@@ -174,6 +237,24 @@ namespace SalesTaxes.Properties {
         internal static string txt_return {
             get {
                 return ResourceManager.GetString("txt_return", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Step {0} of {1}.
+        /// </summary>
+        internal static string txt_steps {
+            get {
+                return ResourceManager.GetString("txt_steps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name cannot be empty.
+        /// </summary>
+        internal static string txt_validation_name {
+            get {
+                return ResourceManager.GetString("txt_validation_name", resourceCulture);
             }
         }
     }
