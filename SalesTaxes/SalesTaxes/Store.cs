@@ -1,4 +1,6 @@
 ﻿using SalesTaxes.Helpers;
+using SalesTaxes.Logic;
+using SalesTaxes.Properties;
 using System;
 
 namespace SalesTaxes
@@ -7,28 +9,37 @@ namespace SalesTaxes
     {
         static void Main(string[] args)
         {
+            //Class where we have all the logic to display the products
+            var itemLogic = new ItemLogic();
+            //Class where we have all the logic to buy products
+            var storeLogic = new StoreLogic();
+
             var isBuying = true;
 
             //Being in a loopt until the sale is finished or the client leaves
             while (isBuying) 
             {
                 //Displaying the menu
-                WriteLineHelper.InfoAlert("[1] List of products \n" +
-                                          "[2] Purchase");
-                WriteLineHelper.WarningAlert("[0] Exit \n");
+                WriteLineHelper.InfoAlert($"[1] {Resources.txt_listOfProducts} \n" +
+                                          $"[2] {Resources.txt_purchase}");
+                WriteLineHelper.WarningAlert($"[0] {Resources.txt_exit} \n");
 
                 var option = Console.ReadLine();
 
+                Console.Clear();
+
                 //If the input is valid we check which option the user selected
-                if (InputHelper.IsValidMenuInput(option)) 
+                if (InputHelper.IsValidOption(option)) 
                 {
                     switch (option) 
                     {
                         case "1":
-                            Console.Clear();
+                            itemLogic.ShowProductsByCategory();
+                            WriteLineHelper.InfoAlert(Resources.txt_return);
+                            Console.ReadLine();
                             break;
                         case "2":
-                            Console.Clear();
+                            storeLogic.StartBuyingProducts();
                             break;
                         case "0":
                             isBuying = false;

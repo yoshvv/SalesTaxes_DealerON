@@ -7,6 +7,12 @@ namespace SalesTaxes.Models
     /// </summary>
     public class Basket : IBasket
     {
+        public Basket(Item product, int quantity)
+        {
+            Product = product;
+            Quantity = quantity;
+        }
+
         public Item Product {get; set;}
 
         public int Quantity { get; set; }

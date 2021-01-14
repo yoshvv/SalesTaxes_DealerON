@@ -14,7 +14,7 @@ namespace SalesTaxes.Database
             InitItems();
         }
 
-        public List<Item> StoreItems { get; set; }
+        private List<Item> StoreItems { get; set; }
 
         public void InitItems() 
         {
@@ -23,8 +23,9 @@ namespace SalesTaxes.Database
                 new Item(name: "Book", price: 12.49m, category: Category.Books),
                 new Item(name: "Music CD", price: 14.99m, category: Category.Others),
                 new Item(name: "Chocolate bar", price: 0.85m, category: Category.Food),
-                new Item(name: "Imported box of chocolates", price: 10, category: Category.Food, isImported: true),
-                new Item(name: "Imported bottle of perfume", price: 47, category: Category.Others, isImported: true),
+                new Item(name: "Bottle of perfume", price: 18.99m, category: Category.Others),
+                new Item(name: "Imported box of chocolates", price: 10.00m, category: Category.Food, isImported: true),
+                new Item(name: "Imported bottle of perfume", price: 47.50m, category: Category.Others, isImported: true),
                 new Item(name: "Packet of headache pills", price: 9.75m, category: Category.MedicalProducts),
             };
         }

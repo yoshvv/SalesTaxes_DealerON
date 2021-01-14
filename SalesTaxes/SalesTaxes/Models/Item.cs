@@ -12,7 +12,7 @@ namespace SalesTaxes.Models
             Name = name;
             Price = price;
             Category = category;
-            ImportTax = isImported ? 0.50m: 0;
+            ImportTax = isImported ? 0.05m: 0;
             IsImported = isImported;
 
             //Initialize the basic tax value depending in the category
@@ -26,6 +26,8 @@ namespace SalesTaxes.Models
                     break;
             }
         }
+
+        public string Guid { get; set; } = System.Guid.NewGuid().ToString();
 
         public string Name { get; set; }
 

@@ -9,7 +9,7 @@ namespace SalesTaxes.Helpers
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public static bool IsValidMenuInput(string input) 
+        public static bool IsValidOption(string input) 
         {
             return new Regex("[0-9]").IsMatch(input);
         }
